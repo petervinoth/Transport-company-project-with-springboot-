@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:th="http://www.thymeleaf.org">
+<head>
+ <title>Add</title>
+ <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+ <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.min.css">
+<style>
+
+.card{
+background-color:#e9ebb9;
+}
+   form{
+      padding-left:300px;
+   }
+   #button{
+      margin-left:100px;
+   }
+   
+ #img{
+  color: white;
+}
+.demo{
+  position: absolute;
+  left: 70%;
+  
+  color: white;
+ }
+  h1{
+    color: white;
+  }
+  #vii{
+    color: white;
+  }
+
+#but{
+position:absolute;
+    left:79%;
+    color: white;
+}
+  
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3">
+
+    <div class="container-fluid">
+       
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                 <div id="img">
+                    <h1>Man Transport</h1>
+
+                </div>          
+               
+              </div> 
+               <div class="demo">
+                  <h6>37/BigColony veerappancahthiram,Erode-600008</h6>
+                </div>
+
+
+</div>
+</div>
+
+</nav>
+
+
+
+<div class="container">
+  
+     <div class="card">
+            <div class="card-body">
+                <div class="col-md-10">
+     <form action="#" th:action="@{/new/{id}(id=${book.id})}" th:object="${book}" method="post">
+      <div class="row">
+             <div class="col-md-3"></div>
+             <div class="col-md-6">
+              <div class="alert alert-success" role="alert" th:if="${msg}" th:utext="${msg}">
+     </div>
+             </div>
+         </div>
+       <div class="row">
+             <div class="col-md-3"></div>
+             <div class="col-md-7">
+              <b><h2>Take Job</h2></b>
+              <p class="hint-text">fill the driver name & Id.</p>
+                 <hr>
+             </div>
+         </div>
+          <div class="row">
+             <div class="col-md-3 field-label-responsive">
+             
+             <b><label for="name"><h5>Company</h5> </label>:</b>
+            
+                 
+             </div>
+             <div class="col-md-6">
+                 <div class="form-group">
+                     <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                         
+                      <input type="text" th:field="*{c_name}" class="form-control" id="c_name" placeholder="Name" required autofocus> 
+                     </div>
+                 </div>
+             </div>
+         </div>
+     
+      <div class="row">
+             <div class="col-md-3 field-label-responsive">
+                 <b><label for="name"><h5>CompanyId</h5></label>:</b>
+             </div>
+             <div class="col-md-6">
+                 <div class="form-group">
+                     <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                      <input type="text" th:field="*{comlic}" class="form-control" id="comlic" placeholder="No" required autofocus> 
+                     </div>
+                 </div>
+             </div>
+         </div>
+          
+         
+          <div class="row">
+             <div class="col-md-3 field-label-responsive">
+                 <b><label for="name"><h5>Product</h5></label>:</b>
+             </div>
+             <div class="col-md-6">
+                 <div class="form-group">
+                     <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                      <input type="text" th:field="*{product}" class="form-control" id="product" placeholder="Name" required autofocus> 
+                     </div>
+                 </div>
+             </div>
+         </div>
+          <div class="row">
+             <div class="col-md-3 field-label-responsive">
+                 <b><label for="name"><h5>From</h5></label>:</b>
+             </div>
+             <div class="col-md-6">
+                 <div class="form-group">
+                     <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                      <input type="text" th:field="*{from_add}" class="form-control" id="from_add" placeholder="From" required autofocus> 
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+
+           <div class="row">
+             <div class="col-md-3 field-label-responsive">
+                <b> <label for="name"><h5>To</h5></label>:</b>
+             </div>
+             <div class="col-md-6">
+                 <div class="form-group">
+                     <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                      <input type="text" th:field="*{to_add}" class="form-control" id="to_add" placeholder="To" required autofocus> 
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div class="row">
+             <div class="col-md-3 field-label-responsive">
+                <b> <label for="name"><h5>DueDate</h5></label>:</b>
+             </div>
+             <div class="col-md-6">
+                 <div class="form-group">
+                     <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                      <input type="text" th:field="*{deliverydate}" class="form-control" id="deliverydate" placeholder="To" required autofocus> 
+                     </div>
+                 </div>
+             </div>
+         </div>
+         
+         
+         
+          <div class="row">
+             <div class="col-md-3 field-label-responsive">
+               <b>  <label for="name"><h5>KM</h5></label>:</b>  
+             </div>
+             <div class="col-md-6">
+                 <div class="form-group">
+                     <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                       <input type="text" th:field="*{distance}" class="form-control" id="distance" placeholder="distance" required autofocus> 
+                     </div>
+                 </div>
+             </div>
+         </div>
+       
+        
+
+           <div class="row">
+             <div class="col-md-3 field-label-responsive">
+               <b>  <label for="name"><h5>DriverName</h5></label>:</b>  
+             </div>
+             <div class="col-md-6">
+                 <div class="form-group">
+                     <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                       <input type="text" th:field="*{dri_name}" class="form-control" id="dri_name" placeholder="Name" required autofocus> 
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+
+           <div class="row">
+             <div class="col-md-3 field-label-responsive">
+                <b> <label for="name"><h5>dri_licence</h5></label>:</b>     
+             </div>
+             <div class="col-md-6">
+                 <div class="form-group">
+                     <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                      <input type="text" th:field="*{dri_licence}" class="form-control" id="dri_licence" placeholder="Id" required autofocus> 
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+
+           
+          <div class="row">
+             <div class="col-md-3"></div>
+             <div class="col-md-6">
+                 <button type="submit" id="button"  class="btn btn-success"><i class="fa fa-user-plus"></i> Apply</button>
+             </div>
+         </div>
+        
+     </form>
+      <div id="vii">
+         <a class="btn btn-primary" th:href="@{/home}">Home</a>
+         </div>
+         </div>
+    
+ </div>
+</div>
+</div>
+
+
+</body>
+
+</html>

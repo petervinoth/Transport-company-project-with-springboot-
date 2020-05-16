@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+ 
+<head>
+ <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Users</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+ <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+ <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.min.css">
+
+<style>
+  #img{
+  color: white;
+}
+#demo{
+  text-align:center;
+}
+h2{
+  color: black;
+}
+h1{
+    color: white;
+}
+#vivi{
+  color: white;
+}
+#but1{
+position:absolute;
+    left:89%;
+    color: white;
+}
+#but{
+position:absolute;
+    left:60%;
+    color: white;
+}
+.demo{
+  position: absolute;
+  left: 70%;
+  
+  color: white;
+ }
+#colo{
+    color: #ed1c1c;
+}
+
+ nav{
+  overflow:auto;
+ }
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3">
+
+    <div class="container-fluid">
+       
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                 <div id="img">
+                    <h1>Man Transport</h1>
+
+                </div>
+          
+    
+<div id="but">
+<h6>37/BigColony veerappancahthiram,Erode-600008</h6>
+</div>
+<div id="but1">
+<a th:href="@{/Logout}" class="btn btn-primary"><i class="fas fa-user-plus ml-2">Sign out</i></a></div>
+</div>
+
+</div>
+</div>
+</div>
+</nav>
+
+
+
+<div id="demo">
+
+<h1 id="colo">welcome Admin.. </h1>
+
+</div>  
+
+<div id="vivi">
+ 
+<h2>Order Details: &nbsp;<i class='fas fa-hand-point-right' style='font-size:48px;color:red'></i>
+
+<a th:href="@{/view}" class="btn btn-primary"><b>View</b></a><br><br></h2>
+
+<h2>Calculate Salary: &nbsp;<i class='fas fa-hand-point-right' style='font-size:48px;color:red'></i>
+
+<a th:href="@{/viewall}" class="btn btn-primary"><b>Click here</b></a><br><br></h2>
+
+<h2>See Salary: &nbsp;<i class='fas fa-hand-point-right' style='font-size:48px;color:red'></i>
+
+<a th:href="@{/viewsalary}" class="btn btn-primary"><b>viewSalary</b></a></h2>
+</div>
+
+
+
+                                 
+</body>
+</html>
+

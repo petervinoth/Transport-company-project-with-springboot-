@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:th="http://www.thymeleaf.org">
+<head>
+ <title>Serach</title>
+ <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+ <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.min.css">
+<style>
+#img{
+  color: white;
+}
+.demo{
+  position: absolute;
+  left: 70%;
+  
+  color: white;
+ }
+ .text-center{
+  color: #d12e2e;
+ }
+ #vii{
+  color: white;
+ }
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3">
+
+    <div class="container-fluid">
+       
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                 <div id="img">
+                    <h1>Man Transport</h1>
+
+                </div>          
+               
+              </div> 
+               <div class="demo">
+                  <h6>37/BigColony veerappancahthiram,Erode-600008</h6>
+                </div>
+
+
+</div>
+</div>
+
+</nav>
+
+
+
+<div class="container my-2">
+        <div class="card">
+            <div class="card-body">
+            <div class="container-fluid">
+            
+            
+            
+            <h1 class="text-center"><b>Details</b></h1><br><br>
+            
+                <div th:switch="${books}" class="container my-5">
+            
+ <table class="table table-striped table-responsive-md">
+                               <thead class="thead-dark">
+                                  <tr>
+                                      
+                                        <th>CompanyName</th>
+                                        <th>licenceNo</th>
+                                        <th>product</th>
+                                        <th>From</th>
+                                        <th>To</th>
+                                        <th>DueDate</th>
+                                        <th>KM</th>
+                                       <th>Action</th>
+                                       
+                                    </tr>
+                                     </thead>
+                                 
+                              
+                                    <tr th:each="book : ${books}">
+                                          <td th:text="${book.c_name}"></td>
+                                        <td th:text="${book.comlic}"></td>
+                                        <td th:text="${book.product}"></td>
+                                        <td th:text="${book.from_add}"></td>
+                                        <td th:text="${book.to_add}"></td>
+                                        <td th:text="${book.deliverydate}"></td>
+                                         <td th:text="${book.distance}"></td>
+                                      
+                                         <td><a th:href="@{/edit/{id}(id=${book.id})}" class="btn btn-success"><i class="fas fa-user-edit ml-2"></i>update</a></td>
+                                        <td><a th:href="@{/delete/{id}(id=${book.id})}" class="btn btn-danger" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i>delete</a></td>
+                                      
+                                       
+                               </tr>
+                               
+                                   
+                             
+                                 </table>
+                                  <center>                    
+                               <div id="vii">
+         <a class="btn btn-primary" th:href="@{/}">Home</a>
+         </div></center>
+                                 </div>
+                                 </div>
+                                 </div>
+                                 </div>
+                                 </div>
+                                 
+                                 </body>
+                                 </html>

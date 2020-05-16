@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:th="http://www.thymeleaf.org">
+<head>
+ <title>Serach</title>
+ <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+ <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.min.css">
+<style>
+#img{
+color:white;
+}
+.text-center{
+  color: #d13434;
+}
+#but{
+position:absolute;
+    left:79%;
+    color: white;
+}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3">
+
+    <div class="container-fluid">
+       
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                 <div id="img">
+                    <h1>Man Transport</h1>
+
+                </div>
+          
+    
+<div id="but">
+<h6>37/BigColony veerappancahthiram,Erode-600008</h6>
+</div>
+
+</div>
+</div>
+</div>
+</nav>
+
+
+<div class="container my-2">
+        <div class="card">
+            <div class="card-body">
+            <div class="container-fluid">
+            
+            
+            
+            <h1 class="text-center"><b>Take Job</b></h1><br><br>
+            
+                <div th:switch="${books}" class="container my-5">
+            
+ <table class="table table-striped table-responsive-md">
+                                 <thead class="thead-dark">
+                                  <tr>  
+                                         <th>driverName</th>
+                                          <th>driverId</th>
+                                        <th>CompanyName</th>
+                                         <th>CompanyLicence</th>
+                                        <th>product</th>
+                                        <th>Fromaddress</th>
+                                        <th>ToAddress</th>
+                                         <th>KM</th>
+                                          <th>DueDate</th>
+                                          <th>Action</th>
+                                        
+                                       
+                                    </tr>
+                                     </thead>
+                                 
+                              
+                                    <tr th:each="book : ${books}">
+                                         <td th:text="${book.dri_name}"></td>
+                                         <td th:text="${book.dri_licence}"></td>
+                                         <td th:text="${book.c_name}"></td>
+                                          <td th:text="${book.comlic}"></td>
+                                        <td th:text="${book.product}"></td>
+                                        <td th:text="${book.from_add}"></td>
+                                        <td th:text="${book.to_add}"></td>
+                                         <td th:text="${book.distance}"></td>
+                                          <td th:text="${book.deliverydate}"></td>
+                                         <td><a th:href="@{/change/{id}(id=${book.id})}" class="btn btn-success"><i class="fas fa-user-edit ml-2"></i>Take</a></td>
+                                      
+                                                
+                                        
+                                       
+                               </tr>
+                               
+                                   
+                                   
+                               
+                                 </table>
+                                 </div>
+                                 </div>
+                                 </div>
+                                 </div>
+                                 </div>
+                                 
+                                 </body>
+                                 </html>
