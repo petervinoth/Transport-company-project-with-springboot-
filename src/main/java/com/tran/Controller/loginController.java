@@ -65,12 +65,12 @@ public class loginController {
 			}
 			else {
 				modelandview.addObject("message","incorrect password");
-				modelandview.setViewName("adlogin");
+				modelandview.setViewName("adminlogin");
 			}
 		}
 			else {
 				modelandview.addObject("message","not exist");
-				modelandview.setViewName("adlogin");
+				modelandview.setViewName("adminlogin");
 			}
 		return modelandview;
 	}
@@ -81,7 +81,7 @@ public class loginController {
 	 }
 	@RequestMapping(value="/Logout",method=RequestMethod.GET)
 	public ModelAndView logiut(ModelAndView modelandview) {
-		modelandview.setViewName("/adminlogin");
+		modelandview.setViewName("adminlogin");
 		return modelandview;
 	}
 	

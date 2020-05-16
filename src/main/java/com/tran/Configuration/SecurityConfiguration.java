@@ -73,7 +73,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 		   .antMatchers("/home").permitAll()
 		   .antMatchers("/home").hasAuthority("ADMIN").anyRequest()
 		   .authenticated().and().csrf().disable()
-		   .formLogin().loginPage("/login").failureUrl("/Login?error=true")
+		   .formLogin().loginPage("/login").failureUrl("/login")
 		  .defaultSuccessUrl("/home")
 		   .permitAll(true)
 		   .usernameParameter("email")

@@ -72,7 +72,7 @@ public class DriverController {
 	   
 	  model.setViewName("login");
 	 // model.addObject("message", "please correct email & Password!!");
-	  // model.addObject("user", new User());
+	  
 	 
 	  return model;
 	 }
